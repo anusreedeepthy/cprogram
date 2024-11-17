@@ -1,0 +1,415 @@
+1. Smart Home Temperature Control
+Problem Statement:
+Design a temperature control system for a smart home. The system should read the current
+temperature from a sensor every minute and compare it to a user-defined setpoint.
+Requirements:
+• If the current temperature is above the setpoint, activate the cooling system.
+• If the current temperature is below the setpoint, activate the heating system.
+• Display the current temperature and setpoint on an LCD screen.
+• Include error handling for sensor failures.
+
+
+Pseudocode
+
+initialize tempsensor
+initialize cooling OFF
+initialize heater OFF
+initialize Setpoint 21 C
+initialize Power ON
+initialize LCD 
+
+While (Power==ON)
+try
+  currtemp = read tempsensor()
+  if(current>setpoint)
+        activate Cooling ON
+        print cooling system activated
+  else if(current<setpoint)
+        activate  Heater ON
+        print heater system activated
+  else 
+        deactivate Heater OFF
+        deactivate Cooler OFF
+        print every thing is in the limit
+
+catch 
+    print Error is Occur in the system
+wait(1sec)
+
+
+2. Automated Plant Watering System
+Problem Statement:
+Create an automated watering system for plants that checks soil moisture levels and waters the
+plants accordingly.
+Requirements:
+• Read soil moisture level from a sensor every hour.
+• If moisture level is below a defined threshold, activate the water pump for a specified
+duration.
+• Log the watering events with timestamps to an SD card.
+• Provide feedback through an LED indicator (e.g., LED ON when watering).
+
+initialize moisturesensor
+initalaize moisturelimit 20
+initialize waterpumb OFF
+initialize wateringduration 1min
+initialize Power ON
+initialize LED  OFF
+initialize LogCard[100]
+int i=0
+
+
+While (Power==ON)
+currmoisture = read moisturesensor()
+  if(currmoisture<moisturelimi)
+        activate waterpumb ON
+        activate LED ON
+        LogCard[i++] = timestamps() 
+        print logtime moisturizationlevel
+        wait(wateringduration)  
+        deactivate waterpumb OFF
+        deactivate LED OFF
+
+  else 
+        print sufficient water is there
+
+
+wait(1 hour)
+
+3. Motion Detection Alarm System
+Problem Statement:
+Develop a security alarm system that detects motion using a PIR sensor.
+Requirements:
+• Continuously monitor motion detection status.
+• If motion is detected for more than 5 seconds, trigger an alarm (buzzer).
+• Send a notification to a mobile device via UART communication.
+• Include a reset mechanism to deactivate the alarm.
+
+
+Pseudocode
+
+initialize PIR sensor
+initalaize motion status = FALSE
+initialize Motion 0 
+initialize UART
+initialize Power ON
+initialize alarm  OFF
+
+while(Power ==ON)
+motion status = read PIR sensor()
+
+if(motion status == TRUE)
+    Motion=Motion+1
+    if(Motion>5)
+    activate alarm ON
+    activate UART ON print "motion detected"
+    deactivate alarm OFF
+    motion =0
+    motion status FALSE
+
+else
+ print doestn't find any thing
+
+wait(1 seconds)
+
+4. Heart Rate Monitor
+Problem Statement:
+Implement a heart rate monitoring application that reads data from a heart rate sensor.
+Requirements:
+• Sample heart rate data every second and calculate the average heart rate over one minute.
+• If the heart rate exceeds 100 beats per minute, trigger an alert (buzzer).
+• Display current heart rate and average heart rate on an LCD screen.
+• Log heart rate data to an SD card for later analysis.
+
+
+
+Pseudocode
+
+initialize heart rate sensor
+initialize SD card
+initialize LCD OFF
+initialize Power ON
+initialize alarm  OFF
+int count = 0
+int heartrate =0
+
+while(Power ==ON)
+heart status = read heart rate sensor()
+heartrate =heartrate + heart status
+count =count + 1
+if(count==60)
+    averageheart = heartrate/count
+    setLOg =settime()
+    print : averageheart ,time,heart status
+    if(averageheart >100 )
+    activate alarm ON
+    print  heartrate
+    else:
+    deactivale alarm OFF
+    set count = 0
+    heart rate =0
+
+wait(1 second)
+
+5. LED Control Based on Light Sensor
+Problem Statement:
+Create an embedded application that controls an LED based on ambient light levels detected by a
+light sensor.
+Requirements:
+• Read light intensity from the sensor every minute.
+• If light intensity is below a certain threshold, turn ON the LED; otherwise, turn it OFF.
+• Include a manual override switch that allows users to control the LED regardless of sensor
+input.
+• Provide status feedback through another LED (e.g., blinking when in manual mode).
+
+
+initialize light intensity
+initialize light threshhold 30
+initialize LCD OFF
+initialize Power ON
+initialize LED status  OFF
+initialize manualLED 
+
+while( power == on)
+light = read light intensity()
+if(manualLED == ON )
+    activate LED ON
+    activate LED status ON
+    else
+    if(Light<light threshhold)
+    activate LED ON
+    activate LED status ON
+    else
+    deactivate LED ON
+    deactivate LED status ON
+wait(1 minute)
+
+
+
+
+10
+10. RFID-Based Access Control System
+Problem Statement:
+Design an access control system using RFID technology to grant or deny access based on scanned
+RFID tags.
+Requirements:
+• Continuously monitor for RFID tag scans using an RFID reader.
+• Compare scanned tags against an authorized list stored in memory.
+• Grant access by activating a relay if the tag is authorized; otherwise, deny access with an
+alert (buzzer).
+• Log access attempts (successful and unsuccessful) with timestamps to an SD card.
+
+
+Initialize RFID reader
+Initialize authorizedtags 
+Initialize relay OFF
+Initialize buzzer OFF
+Initialize SD card for logging
+initalaize power ON
+
+while(power == ON)
+RFID scanner == read RFID Reader()
+timestamp = get_timestamp()
+if(RFID scanner ==authorizedtags)
+        activate relay ON
+        delay(2 seconds)  
+        activaterelay OFF
+        access= "timestamp" :time stamp ,"access" :RFID scanner
+        logSD card(access)
+        print access granted
+else
+        activate_buzzer ON
+        delay(1 second) 
+        activate_buzzer OFF
+        access= "timestamp" :time stamp ,"access" :RFID scanner
+        logSD card(access)
+        print access denaied
+
+wait(1 minute)
+
+
+9 Monitoring System
+Problem Statement: Develop a battery monitoring system that checks battery voltage levels periodically and alerts if voltage drops below a safe threshold.
+Requirements:
+• Measure battery voltage every minute using an ADC (Analog-to-Digital Converter).
+• If voltage falls below 11V, trigger an alert (buzzer) and log the event to memory.
+• Display current voltage on an LCD screen continuously.
+• Implement power-saving features to reduce energy consumption during idle periods.
+
+initalaizeADC
+initalaize alert
+initalaize voltage level 11V
+initalaize LCD
+initialize Power ON
+initalaize  power saving
+initialize Low voltage
+
+while(power == ON)
+ACD value = read ADC()
+voltage = convert ADC to voltage
+print in LCD "  voltage" 
+if(voltage<voltage level)
+    activate alarm ON
+    timestamp = GetCurrentTimestamp()   
+    print in LCD" timestamp , voltage"
+    set power saving(Low voltage)
+    deactivate alarm
+else
+   print in LCD "  voltage" 
+wait(1 minute) 
+
+
+6. Digital Stopwatch
+Problem Statement:
+Design a digital stopwatch application that can start, stop, and reset using button inputs.
+Requirements:
+• Use buttons for Start, Stop, and Reset functionalities.
+• Display elapsed time on an LCD screen in hours, minutes, and seconds format.
+• Include functionality to pause and resume timing without resetting.
+• Log start and stop times to an SD card when stopped.
+
+initalaize Stop
+initalaize Start
+initalaize Reset
+initalaize LCD
+initialize Power ON
+initialize SD card
+initalaize elapsedTime = 0            
+initalaize stopwatchRunning = false       
+initalaize paused = false  
+
+while(power== ON)
+if (Start == ON)
+    startTime = GetCurrentTimestamp()   
+    SDCard("Start Time ")
+    stopwatchRunning = TRUE
+    paused = false
+else if(Stop == ON)
+    stopwatchRunning = false            
+    endTime = GetCurrentTimestamp()    
+    SDCard("Stop Time " )
+else if(Reset == ON)
+    stopwatchRunning = false               
+    paused = false                          
+    elapsedTime = 0                        
+    print ElapsedTime(elapsedTime) 
+if(stopwatchRunning==true && paused==false)
+    elapsedTime = elapsedTime + 1
+    print " elapsedTime "
+ wait(1 minites)
+
+ 7. Temperature Logging System
+Problem Statement:
+Implement a temperature logging system that records temperature data at regular intervals.
+Requirements:
+• Read temperature from a sensor every 10 minutes.
+• Store each reading along with its timestamp in an array or log file.
+• Provide functionality to retrieve and display historical data upon request.
+• Include error handling for sensor read failures.
+
+
+initalaize temperaturesensor
+initialize templog[100]
+initalaize LCD display
+initialize power ON
+initialize sensor error false
+initialize SDCard
+
+while(power == ON)
+try
+    currtemp = read temperature sensor()
+    if(currtemp == Error)
+    sensorError = true
+    print "sensor error"
+    else
+    sensorError = false
+    timestamp = GetCurrentTimestamp()
+    templog(timestamp, currtemp)
+    SDCard.write(templog)
+    print"templog"
+catch
+    print" temperature sensor is not working properly"
+
+wait(10 minites)  
+
+
+
+INITIALIZE speed = 50                    
+INITIALIZE currentState = "Stopped"      
+INITIALIZE BluetoothModule         
+INITIALIZE Motors                  
+INITIALIZE LEDs
+while(power ==ON)
+ command =read BluetoothModule()
+ if(command != null)
+    if(command==forwardmove)
+    Motors.SetDirection("Forward")
+    speed = newSpeed
+    Motors.SetSpeed(speed)
+    Motors.Start()
+    if currentState == "Moving" 
+    activate LED ON
+    if speed>100
+    activate LED
+    else
+    deactivate LED
+    else
+    deactivate LED
+ else if(command == backward)
+    Motors.SetDirection("backward")
+    speed = newSpeed
+    Motors.SetSpeed(speed)
+    Motors.Start()
+    if currentState == "Moving" 
+    activate LED ON
+     if speed>100
+    activate LED
+    else
+    deactivate LED
+    else
+    deactivate LED
+ else if(command == left)
+    Motors.SetDirection("left")
+    speed = newSpeed
+    Motors.SetSpeed(speed)
+    Motors.Start()
+    if currentState == "turning" 
+    activate LED ON
+     if speed>100
+    activate LED
+    else
+    deactivate LED
+    else
+    deactivate LED    
+ else if(command == right)
+    Motors.SetDirection("right")
+    speed = newSpeed
+    Motors.SetSpeed(speed)
+    Motors.Start()
+    if currentState == "turning" 
+    activate LED ON
+     if speed>100
+    activate LED
+    else
+    deactivate LED
+    else
+    deactivate LED
+else if(command == stop)
+    Motors.stop()
+    if currentState == "Stop" 
+    deactivate LED ON
+
+    else
+    activate LED
+else
+print"no command received"
+
+
+
+
+
+
+
+
+
+
+

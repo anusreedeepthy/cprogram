@@ -1,0 +1,57 @@
+Assignment 1: Constant Variable Declaration
+
+Objective: Learn to declare and initialize constant variables.
+
+Write a program that declares a constant integer variable for the value of Pi (3.14) and prints it. Ensure that any attempt to modify this variable results in a compile-time error.
+ 
+Assignment 2: Using const with Pointers
+
+Objective: Understand how to use const with pointers to prevent modification of pointed values.
+
+Create a program that uses a pointer to a constant integer. Attempt to modify the value through the pointer and observe the compiler's response.
+ 
+Assignment 3: Constant Pointer
+
+Objective: Learn about constant pointers and their usage.
+
+Write a program that declares a constant pointer to an integer and demonstrates that you cannot change the address stored in the pointer.
+ 
+Assignment 4: Constant Pointer to Constant Value
+
+Objective: Combine both constant pointers and constant values.
+
+Create a program that declares a constant pointer to a constant integer. Demonstrate that neither the pointer nor the value it points to can be changed.
+ 
+Assignment 5: Using const in Function Parameters
+
+Objective: Understand how to use const with function parameters.
+
+Write a function that takes a constant integer as an argument and prints its value. Attempting to modify this parameter inside the function should result in an error.
+ 
+ 
+Assignment 6: Array of Constants
+
+Objective: Learn how to declare and use arrays with const.
+
+Create an array of constants representing days of the week. Print each day using a loop, ensuring that no modifications can be made to the array elements.
+ 
+ 
+Assignment 7: Constant Expressions
+
+Objective: Understand how constants can be used in expressions.
+
+Write a program that uses constants in calculations, such as calculating the area of a circle using const.
+ 
+Assignment 8: Constant Variables in Loops
+
+Objective: Learn how constants can be used within loops for fixed iterations.
+
+Create a program that uses a constant variable to define the number of iterations in a loop, ensuring it cannot be modified during execution.
+ 
+Assignment 9: Constant Global Variables
+
+Objective: Explore global constants and their accessibility across functions.
+
+Write a program that declares a global constant variable and accesses it from multiple functions without modifying its value.
+ 
+ 

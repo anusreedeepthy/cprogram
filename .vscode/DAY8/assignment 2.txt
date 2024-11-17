@@ -1,0 +1,55 @@
+Problem Statement 1: Arithmetic Operations Calculator
+ 
+Description: Write a C program that performs basic arithmetic operations (addition, subtraction, multiplication, and division) on two numbers provided by the user. The program should use functions to perform each operation and demonstrate call by value.
+ 
+Requirements:
+Create separate functions for addition, subtraction, multiplication, and division.
+Each function should take two parameters (the numbers) and return the result.
+Use appropriate data types for the variables.
+Use operators for arithmetic calculations.
+ 
+Example Input/Output:
+ 
+Enter first number: 10
+Enter second number: 5
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2.0
+ 
+Problem Statement 2: Temperature Conversion
+ 
+Description: Develop a C program that converts temperatures between Celsius and Fahrenheit. The program should use functions to handle the conversions and demonstrate call by value.
+ 
+Requirements:
+Create two functions: one for converting Celsius to Fahrenheit and another for converting Fahrenheit to Celsius.
+Each function should accept a temperature value as an argument and return the converted temperature.
+Use appropriate data types for temperature values.
+Use arithmetic operators to perform the conversion calculations.
+ 
+Example Input/Output:
+ 
+Enter temperature in Celsius: 25
+Temperature in Fahrenheit: 77.0
+ 
+Enter temperature in Fahrenheit: 77
+Temperature in Celsius: 25.0
+ 
+ 
+Problem Statement 2: Simple Interest Calculator
+ 
+Description: Develop a C program that calculates simple interest based on user input for principal amount, rate of interest, and time period. The program should use a function to compute interest and demonstrate call by value.
+ 
+Requirements:
+Implement a function that takes three parameters (principal, rate, time) and returns the calculated simple interest.
+Use appropriate data types for financial calculations (e.g., float or double).
+Utilize arithmetic operators to compute simple interest using the formula 
+SI = P×R×T/100
+Example Input/Output:
+ 
+Enter principal amount: 1000
+Enter rate of interest: 5
+Enter time period (in years): 3
+Simple Interest is: 150.0
+
+has context menu

@@ -1,0 +1,29 @@
+Write a program to count the number of vowels and consonants in a given string.
+
+The program should accept a string of text from the user.
+It should count the number of vowels (a, e, i, o, u) and consonants (all other alphabetic characters).
+The program should ignore any non-alphabetic characters (e.g., spaces, punctuation).
+It should then display the count of vowels and consonants.
+Example Interaction:
+plaintext
+Copy code
+Enter a string: Hello World!
+Vowels: 3
+Consonants: 7
+For another input:
+Jobin C Johnson
+10:12 PM
+Write a program to find the longest word in a sentence entered by the user.
+
+The program should accept a sentence as input.
+It should split the sentence into words and determine the longest word.
+If there are multiple words of the same length, return the first one.
+Display the longest word and its length.
+Example Interaction:
+plaintext
+Copy code
+Enter a sentence: The quick brown fox jumps over the lazy dog  
+Longest word: "jumps"  
+Length: 5  
+
+Enter a sentence: Programming is fun and challengin

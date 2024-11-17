@@ -1,0 +1,146 @@
+Problem Statement 1: Temperature Monitoring System
+Objective: Design a temperature monitoring system that reads temperature data from a sensor and triggers an alarm if the temperature exceeds a predefined threshold.
+Requirements:
+Read temperature data from a temperature sensor at regular intervals.
+Compare the read temperature with a predefined threshold.
+If the temperature exceeds the threshold, activate an alarm (e.g., LED or buzzer).
+Include functionality to reset the alarm.
+ 
+Problem Statement 2: Motor Control System
+Objective: Implement a motor control system that adjusts the speed of a DC motor based on user input.
+Requirements:
+Use a potentiometer to read user input for desired motor speed.
+Control the motor speed using PWM (Pulse Width Modulation).
+Display the current speed on an LCD.
+ 
+Problem Statement 3: LED Blinking Pattern
+Objective: Create an embedded system that controls an array of LEDs to blink in a specific pattern based on user-defined settings.
+Requirements:
+Allow users to define blink patterns (e.g., fast, slow).
+Implement different patterns using timers and interrupts.
+Provide feedback through an LCD or serial monitor.
+ 
+Problem Statement 5: Data Logger
+Objective: Develop a data logger that collects sensor data over time and stores it in non-volatile memory.
+Requirements:
+Read data from sensors (e.g., temperature, humidity) at specified intervals.
+Store collected data in EEPROM or flash memory.
+Implement functionality to retrieve and display logged data
+ 
+ start
+ initalize the temperature value
+ initalize the alarm system 
+ initalize the LED
+ Read the temperature from the sensor at regular intervals.
+ if the temperature value is above the threshold limit
+ the alarm make sound
+ else  if
+ the alarm will not make noise
+ end
+
+
+
+ start
+ initalize potentiometer
+ initalize the LED
+ read the potentiometer value from the user
+ set the motor speed using PWM
+ display the motor speed on LED
+ end
+
+
+
+
+
+start
+ initalize LED
+ read the value from the user
+
+
+
+
+start
+initalize sensors
+initalize EEPROM
+Read data from the sensor
+Store sensor data in EEPROM
+Increment memory address to store next data
+display the sensors data
+repeat the process
+end
+
+
+start 
+intialize the variables num1 and num2,c
+switch(c)
+case:'+'
+c=num1+num2
+printf(c)
+break
+case:'-'
+c=num1-num2
+printf(c)
+break
+case:'*'
+c=num1*num2
+printf(c)
+break
+case:'/'
+if num2 != 0:
+c = num1 / num2
+printf num1 + " / " + num2 + " = " + c
+else:
+printf "Error! Division by zero is not allowed."
+end IF
+break
+
+
+
+
+factorial of a number
+------------------------
+
+initalize the number,fact=1
+if number<0
+print"error"
+else
+for(i=number i>0;i--)
+    fact = fact * number
+printf(factorial)
+
+
+factorial of a number using recusion
+
+
+
+
+Problem Statement: Smart Irrigation System
+Objective: Design a smart irrigation system that automatically waters plants based on soil moisture levels and environmental conditions. The system should monitor soil moisture and activate the water pump when the moisture level falls below a predefined threshold.
+Requirements:
+Inputs:
+Outputs:
+Conditions:
+The pump should only activate if the soil moisture is below the threshold and it is daytime (e.g., between 6 AM and 6 PM).
+If the soil moisture is adequate, the system should display a message indicating that watering is not needed.
+Activate the water pump when the soil moisture is below the threshold.
+Display the current soil moisture level and whether the pump is activated or not.
+Soil moisture sensor reading (percentage).
+User-defined threshold for soil moisture (percentage).
+Time of day (to prevent watering during rain or at night).
+
+Write pseudocode that outlines the algorithm for the smart irrigation system.
+Create a flowchart that visually represents the logic of your pseudocode.
+has context menu
+ ------------------------------------
+start
+initalize the variables time,LED,moisture,pump
+read the moister value
+read the timestamp
+if timestamp<6AM
+if(moisture<threshold)
+    printf('water the plants')
+else
+    printf('sufficent water is there')
+else
+printf("not aloweded")
+

@@ -1,0 +1,15 @@
+start
+initalize the variables a and b
+initalize gcd =1 
+if a<b 
+checking  a < b is smaller
+ take a loop i start from 1 to a
+ check the i is divided by a and b with out any remainde
+ then a and b are divisible by i the update gcd value as i
+if b<a
+take a loop i start from 1 to a
+ check the i is divided by a and b with out any remainde
+ then a and b are divisible by i the update gcd value as i
+ calculate the lcm value 
+ print the GCd value
+print the lcd value
